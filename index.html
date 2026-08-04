@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کاتالوگ جامع بازی‌های PS4</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: rgba(22, 27, 34, 0.75);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --text-main: #f0f6fc;
+            --text-muted: #8b949e;
+            --accent: #58a6ff;
+        }
+
+        body {
+            font-family: Tahoma, sans-serif;
+            background-color: var(--bg-color);
+            background-image: radial-gradient(circle at 50% 0%, #1f2430 0%, #0d1117 75%);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: var(--accent);
+            margin-bottom: 10px;
+            font-size: 2.2rem;
+        }
+
+        .search-box {
+            width: 100%;
+            max-width: 500px;
+            padding: 14px 20px;
+            font-size: 16px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            background: rgba(13, 17, 23, 0.8);
+            color: #fff;
+            outline: none;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            transition: all 0.3s ease;
+            display: block;
+            margin: 0 auto 30px auto;
+        }
+
+        .search-box:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 15px rgba(88, 166, 255, 0.3);
+        }
+
+        .grid-catalog {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .game-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px 0 rgba(88, 166, 255, 0.2);
+            border-color: rgba(88, 166, 255, 0.4);
+        }
+
+        .game-cover {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .game-content {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .game-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin: 0 0 8px 0;
+            color: #fff;
+        }
+
+        .game-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            line-height: 1.4;
+            flex-grow: 1;
+        }
+
+        .game-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 6px;
+            font-size: 0.8rem;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 8px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+        }
+
+        .game-details span {
+            color: var(--text-main);
+        }
+
+        .trailer-btn {
+            display: block;
+            text-align: center;
+            background-color: #2ea043;
+            color: white;
+            text-decoration: none;
+            padding: 8px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        .trailer-btn:hover {
+            background-color: #238636;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>کاتالوگ جامع بازی‌های پلی‌استیشن ۴</h1>
+            <p style="color: var(--text-muted);">جستجوی هوشمند و دسته‌بندی کامل بازی‌ها</p>
+        </header>
+
+        <input type="text" id="searchBox" class="search-box" placeholder="جستجوی نام بازی..." onkeyup="searchGame()">
+
+        <div class="grid-catalog" id="gameGrid">
+            
+            <!-- 7 Days To Die -->
+            <div class="game-card" data-name="7 days to die">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500&auto=format&fit=crop&q=60" alt="7 Days To Die" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">7 Days To Die</h3>
+                    <p class="game-desc">ترکیبی از بقا، تیراندازی و دفاع در برابر زامبی‌ها در دنیایی آخرالزمانی.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+18</span></div>
+                        <div>زمان: <span>۶۰ ساعت</span></div>
+                        <div>حجم: <span>۳۵ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=7+Days+To+Die+PS4+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- A Plague Tale - Innocence -->
+            <div class="game-card" data-name="a plague tale innocence">
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=500&auto=format&fit=crop&q=60" alt="A Plague Tale" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">A Plague Tale - Innocence</h3>
+                    <p class="game-desc">داستان تاریک و احساسی دو خواهر و برادر در فرانسه‌ی قرون وسطایی.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+16</span></div>
+                        <div>زمان: <span>۱۲ ساعت</span></div>
+                        <div>حجم: <span>۴۵ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=A+Plague+Tale+Innocence+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- A Way Out -->
+            <div class="game-card" data-name="a way out">
+                <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=500&auto=format&fit=crop&q=60" alt="A Way Out" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">A Way Out</h3>
+                    <p class="game-desc">بازی اکشن ماجراجویی و کوآپ دو نفره برای فرار از زندان.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+18</span></div>
+                        <div>زمان: <span>۶ ساعت</span></div>
+                        <div>حجم: <span>۲۲ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=A+Way+Out+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Alan Wake Remastered -->
+            <div class="game-card" data-name="alan wake remastered">
+                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=500&auto=format&fit=crop&q=60" alt="Alan Wake" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">Alan Wake Remastered</h3>
+                    <p class="game-desc">نویسنده‌ای که درگیر کابوس‌های تاریک کتاب خودش در یک شهر مرموز می‌شود.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+15</span></div>
+                        <div>زمان: <span>۱۱ ساعت</span></div>
+                        <div>حجم: <span>۲۸ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=Alan+Wake+Remastered+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Assassin's Creed Valhalla -->
+            <div class="game-card" data-name="assassins creed valhalla">
+                <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=500&auto=format&fit=crop&q=60" alt="AC Valhalla" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">Assassin's Creed Valhalla</h3>
+                    <p class="game-desc">حماسه وایکینگ‌ها و کشورگشایی ایوور در بریتانیا.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+18</span></div>
+                        <div>زمان: <span>۶۰ ساعت</span></div>
+                        <div>حجم: <span>۸۵ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=Assassins+Creed+Valhalla+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Batman Arkham Knight -->
+            <div class="game-card" data-name="batman arkham knight">
+                <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=500&auto=format&fit=crop&q=60" alt="Batman Arkham Knight" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">Batman - Arkham Knight</h3>
+                    <p class="game-desc">نبرد نهایی شوالیه تاریکی با مترسک و شوالیه آرکام در گاتهام.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+15</span></div>
+                        <div>زمان: <span>۱۶ ساعت</span></div>
+                        <div>حجم: <span>۵۰ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=Batman+Arkham+Knight+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Battlefield V -->
+            <div class="game-card" data-name="battlefield v">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500&auto=format&fit=crop&q=60" alt="Battlefield V" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">Battlefield V</h3>
+                    <p class="game-desc">تجربه جنگ جهانی دوم در بزرگ‌ترین و تخریب‌پذیرترین میادین نبرد.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+18</span></div>
+                        <div>زمان: <span>۸ ساعت</span></div>
+                        <div>حجم: <span>۸۰ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=Battlefield+V+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Bloodborne -->
+            <div class="game-card" data-name="bloodborne">
+                <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=500&auto=format&fit=crop&q=60" alt="Bloodborne" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">Bloodborne</h3>
+                    <p class="game-desc">شاهکار اکشن نقش‌آفرینی و چالش‌برانگیز در شهر گوتیک یارنام.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+16</span></div>
+                        <div>زمان: <span>۳۵ ساعت</span></div>
+                        <div>حجم: <span>۳۴ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=Bloodborne+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Call of Duty Modern Warfare -->
+            <div class="game-card" data-name="call of duty modern warfare">
+                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=500&auto=format&fit=crop&q=60" alt="COD MW" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">COD Modern Warfare</h3>
+                    <p class="game-desc">عملیات‌های ویژه و نفس‌گیر با کاپیتان پرایس در جنگ‌های مدرن.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+18</span></div>
+                        <div>زمان: <span>۶ ساعت</span></div>
+                        <div>حجم: <span>۱۲۰ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=Call+of+Duty+Modern+Warfare+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Crash Bandicoot 4 -->
+            <div class="game-card" data-name="crash bandicoot 4">
+                <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=500&auto=format&fit=crop&q=60" alt="Crash 4" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">Crash Bandicoot 4</h3>
+                    <p class="game-desc">ادامه ماجراجویی‌های پرجوش و خروش کراش برای نجات جهان‌های موازی.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+7</span></div>
+                        <div>زمان: <span>۱۰ ساعت</span></div>
+                        <div>حجم: <span>۳۰ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=Crash+Bandicoot+4+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Cyberpunk 2077 -->
+            <div class="game-card" data-name="cyberpunk 2077">
+                <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?w=500&auto=format&fit=crop&q=60" alt="Cyberpunk 2077" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">Cyberpunk 2077</h3>
+                    <p class="game-desc">نقش‌آفرینی جهان‌باز در کلان‌شهر آینده‌نگارانه و سایبرپانک نایت سیتی.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+18</span></div>
+                        <div>زمان: <span>۵۵ ساعت</span></div>
+                        <div>حجم: <span>۶۵ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=Cyberpunk+2077+PS4+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Dark Souls III -->
+            <div class="game-card" data-name="dark souls iii">
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=500&auto=format&fit=crop&q=60" alt="Dark Souls 3" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">DARK SOULS III</h3>
+                    <p class="game-desc">نبرد با باس‌های نفس‌گیر و کاوش در دنیای رو به زوال لوتریک.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+16</span></div>
+                        <div>زمان: <span>۳۲ ساعت</span></div>
+                        <div>حجم: <span>۲۵ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=Dark+Souls+3+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Days Gone -->
+            <div class="game-card" data-name="days gone">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=500&auto=format&fit=crop&q=60" alt="Days Gone" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">DAYS GONE</h3>
+                    <p class="game-desc">موتورسواری و بقا در دنیایی پر از فریکرها و گله‌های عظیم زامبی.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+18</span></div>
+                        <div>زمان: <span>۴0 ساعت</span></div>
+                        <div>حجم: <span>۴5 گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=Days+Gone+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Death Stranding -->
+            <div class="game-card" data-name="death stranding">
+                <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=500&auto=format&fit=crop&q=60" alt="Death Stranding" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">DEATH STRANDING</h3>
+                    <p class="game-desc">اتصال دوباره‌ی شهرهای از هم گسیخته‌ی آمریکا توسط سم پورتر.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+18</span></div>
+                        <div>زمان: <span>۴۰ ساعت</span></div>
+                        <div>حجم: <span>۸۰ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=Death+Stranding+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Devil May Cry 5 -->
+            <div class="game-card" data-name="devil may cry 5">
+                <img src="https://images.unsplash.com/photo-1612287233202-b51a36616763?w=500&auto=format&fit=crop&q=60" alt="Devil May Cry 5" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">Devil May Cry 5</h3>
+                    <p class="game-desc">اکشن خالص، سریع و هیجان‌انگیز با دانته، نرو و ورژیل.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+18</span></div>
+                        <div>زمان: <span>۱۱ ساعت</span></div>
+                        <div>حجم: <span>۳۸ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=Devil+May+Cry+5+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- EA Sports FC 25 / 26 -->
+            <div class="game-card" data-name="ea sports fc 25">
+                <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=500&auto=format&fit=crop&q=60" alt="FC 25" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">EA SPORTS FC 25</h3>
+                    <p class="game-desc">جدیدترین و محبوب‌ترین بازی شبیه‌ساز فوتبال و مسابقات باشگاهی.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>عمومی</span></div>
+                        <div>زمان: <span>بی‌پایان</span></div>
+                        <div>حجم: <span>۵0 گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=EA+Sports+FC+25+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Elden Ring -->
+            <div class="game-card" data-name="elden ring">
+                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=500&auto=format&fit=crop&q=60" alt="Elden Ring" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">ELDEN RING</h3>
+                    <p class="game-desc">ماجراجویی حماسی و جهان‌باز در دنیای تاریک و فانتزی جورج مارتین.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+16</span></div>
+                        <div>زمان: <span>۱۰۰ ساعت</span></div>
+                        <div>حجم: <span>۴۸ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=Elden+Ring+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Far Cry 6 -->
+            <div class="game-card" data-name="far cry 6">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500&auto=format&fit=crop&q=60" alt="Far Cry 6" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">Far Cry 6</h3>
+                    <p class="game-desc">قیام علیه دیکتاتور جزیره گرمسیری یارا با مبارزه چریکی.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+18</span></div>
+                        <div>زمان: <span>۲۴ ساعت</span></div>
+                        <div>حجم: <span>۶۰ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=Far+Cry+6+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Ghost of Tsushima -->
+            <div class="game-card" data-name="ghost of tsushima">
+                <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=500&auto=format&fit=crop&q=60" alt="Ghost of Tsushima" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">Ghost of Tsushima</h3>
+                    <p class="game-desc">داستان سامورایی شجاع جین ساکای در جزیره تسوشیما برای مقابله با مغول‌ها.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+18</span></div>
+                        <div>زمان: <span>۲۵ ساعت</span></div>
+                        <div>حجم: <span>۵۰ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=Ghost+of+Tsushima+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- God of War Ragnarok -->
+            <div class="game-card" data-name="god of war ragnarok">
+                <img src="https://images.unsplash.com/photo-1612287233202-b51a36616763?w=500&auto=format&fit=crop&q=60" alt="God of War Ragnarok" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">God of War Ragnarok</h3>
+                    <p class="game-desc">ادامه حماسه کریتوس و آترئوس در میان اساطیر نورس و رویداد رگناروک.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+18</span></div>
+                        <div>زمان: <span>۲۵ ساعت</span></div>
+                        <div>حجم: <span>۹۰ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=God+of+War+Ragnarok+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Gran Turismo 7 -->
+            <div class="game-card" data-name="gran turismo 7">
+                <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=500&auto=format&fit=crop&q=60" alt="Gran Turismo 7" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">Gran Turismo 7</h3>
+                    <p class="game-desc">واقع‌گرایانه‌ترین و کامل‌ترین شبیه‌ساز مسابقات اتومبیل‌رانی.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>عمومی</span></div>
+                        <div>زمان: <span>۴۵ ساعت</span></div>
+                        <div>حجم: <span>۹۵ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=Gran+Turismo+7+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Grand Theft Auto V -->
+            <div class="game-card" data-name="grand theft auto v">
+                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=500&auto=format&fit=crop&q=60" alt="GTA V" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">Grand Theft Auto V</h3>
+                    <p class="game-desc">داستان سه جنایت‌کار و انجام سرقت‌های بزرگ در لوس سانتوس.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+18</span></div>
+                        <div>زمان: <span>۳۲ ساعت</span></div>
+                        <div>حجم: <span>۷۵ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=GTA+V+PS4+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Hogwarts Legacy -->
+            <div class="game-card" data-name="hogwarts legacy">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=500&auto=format&fit=crop&q=60" alt="Hogwarts Legacy" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">Hogwarts Legacy</h3>
+                    <p class="game-desc">ماجراجویی جادویی در دنیای هاگوارتز و قرن نوزدهم جادوگری.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+12</span></div>
+                        <div>زمان: <span>۲۷ ساعت</span></div>
+                        <div>حجم: <span>۵۰ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=Hogwarts+Legacy+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Horizon Forbidden West -->
+            <div class="game-card" data-name="horizon forbidden west">
+                <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=500&auto=format&fit=crop&q=60" alt="Horizon Forbidden West" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">Horizon Forbidden West</h3>
+                    <p class="game-desc">سفر ایلوی به غرب ممنوعه برای نجات زمین از طاعونی مرگبار.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+16</span></div>
+                        <div>زمان: <span>۳۰ ساعت</span></div>
+                        <div>حجم: <span>۹۰ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=Horizon+Forbidden+West+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- It Takes Two -->
+            <div class="game-card" data-name="it takes two">
+                <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=500&auto=format&fit=crop&q=60" alt="It Takes Two" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">It Takes Two</h3>
+                    <p class="game-desc">بهترین بازی کوآپ دونفره برای زوجی که به عروسک جادو تبدیل شده‌اند.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+12</span></div>
+                        <div>زمان: <span>۱۳ ساعت</span></div>
+                        <div>حجم: <span>۴0 گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=It+Takes+Two+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Just Cause 4 -->
+            <div class="game-card" data-name="just cause 4">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500&auto=format&fit=crop&q=60" alt="Just Cause 4" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">Just Cause 4</h3>
+                    <p class="game-desc">اکشن انفجاری و آزادی کامل در تخریب محیط با ریکو رودریگز.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+15</span></div>
+                        <div>زمان: <span>۱۲ ساعت</span></div>
+                        <div>حجم: <span>۴5 گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=Just+Cause+4+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Marvel's Spider-Man -->
+            <div class="game-card" data-name="marvels spider-man">
+                <img src="https://images.unsplash.com/photo-1612287233202-b51a36616763?w=500&auto=format&fit=crop&q=60" alt="Spider-Man" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">Marvel's Spider-Man</h3>
+                    <p class="game-desc">تاب خوردن در نیویورک و مبارزه با دشمنان به عنوان مرد عنکبوتی باجذبه.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+16</span></div>
+                        <div>زمان: <span>۱۷ ساعت</span></div>
+                        <div>حجم: <span>۴۵ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=Marvels+Spider+Man+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Metro Exodus -->
+            <div class="game-card" data-name="metro exodus">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=500&auto=format&fit=crop&q=60" alt="Metro Exodus" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">Metro Exodus</h3>
+                    <p class="game-desc">سفر خطرناک و بقا در روسیه‌ی آخرالزمانی و بیرون از تونل‌های مترو.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+18</span></div>
+                        <div>زمان: <span>۱۵ ساعت</span></div>
+                        <div>حجم: <span>۶۰ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=Metro+Exodus+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Mortal Kombat 11 -->
+            <div class="game-card" data-name="mortal kombat 11">
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=500&auto=format&fit=crop&q=60" alt="Mortal Kombat 11" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">Mortal Kombat 11</h3>
+                    <p class="game-desc">خونین‌ترین و بهترین بازی مبارزه‌ای با فینال‌های فیتالیتی جذاب.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+18</span></div>
+                        <div>زمان: <span>۶ ساعت</span></div>
+                        <div>حجم: <span>۷5 گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=Mortal+Kombat+11+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Need for Speed Heat -->
+            <div class="game-card" data-name="need for speed heat">
+                <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=500&auto=format&fit=crop&q=60" alt="NFS Heat" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">Need for Speed Heat</h3>
+                    <p class="game-desc">مسابقات غیرقانونی روز و تعقیب و گریز نفس‌گیر پلیس در شب.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+12</span></div>
+                        <div>زمان: <span>۱۴ ساعت</span></div>
+                        <div>حجم: <span>۲۵ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=Need+for+Speed+Heat+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Red Dead Redemption 2 -->
+            <div class="game-card" data-name="red dead redemption 2">
+                <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=500&auto=format&fit=crop&q=60" alt="RDR2" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">Red Dead Redemption 2</h3>
+                    <p class="game-desc">حماسه فوق‌العاده وسترن زندگی آرتور مورگان و باند فان در لینده.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+18</span></div>
+                        <div>زمان: <span>۵۰ ساعت</span></div>
+                        <div>حجم: <span>۱۰۰ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=Red+Dead+Redemption+2+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Resident Evil 4 Remake -->
+            <div class="game-card" data-name="resident evil 4">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500&auto=format&fit=crop&q=60" alt="Resident Evil 4" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">Resident Evil 4 (Remake)</h3>
+                    <p class="game-desc">ماموریت نجات دختر رئیس‌جمهور در روستایی مرموز و تسخیرشده.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+18</span></div>
+                        <div>زمان: <span>۱۶ ساعت</span></div>
+                        <div>حجم: <span>۳۰ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=Resident+Evil+4+Remake+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Sekiro Shadows Die Twice -->
+            <div class="game-card" data-name="sekiro shadows die twice">
+                <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=500&auto=format&fit=crop&q=60" alt="Sekiro" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">Sekiro: Shadows Die Twice</h3>
+                    <p class="game-desc">مبارزات شمشیرزنی مرگبار و مهارت‌محور در ژاپن فئودال.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+18</span></div>
+                        <div>زمان: <span>۳۰ ساعت</span></div>
+                        <div>حجم: <span>۲۵ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=Sekiro+Shadows+Die+Twice+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- The Last of Us Part II -->
+            <div class="game-card" data-name="the last of us part ii">
+                <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=500&auto=format&fit=crop&q=60" alt="TLOU Part II" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">The Last of Us Part II</h3>
+                    <p class="game-desc">داستان پر از احساس انتقام و بقای الی در دنیایی آخرالزمانی.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+18</span></div>
+                        <div>زمان: <span>۲۴ ساعت</span></div>
+                        <div>حجم: <span>۸۰ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=The+Last+of+Us+Part+II+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- The Witcher 3 Wild Hunt -->
+            <div class="game-card" data-name="the witcher 3 wild hunt">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=500&auto=format&fit=crop&q=60" alt="Witcher 3" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">The Witcher 3: Wild Hunt</h3>
+                    <p class="game-desc">ماجراجویی حماسی گرالت ریویا برای یافتن سیری در دنیایی پهناور.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+18</span></div>
+                        <div>زمان: <span>۵۵ ساعت</span></div>
+                        <div>حجم: <span>۵۰ گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=The+Witcher+3+PS4+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Uncharted 4 A Thief's End -->
+            <div class="game-card" data-name="uncharted 4 a thiefs end">
+                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=500&auto=format&fit=crop&q=60" alt="Uncharted 4" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">Uncharted 4: A Thief's End</h3>
+                    <p class="game-desc">آخرین ماجراجویی و گنج‌یابی پرهیجان نیتن دریک.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+16</span></div>
+                        <div>زمان: <span>۱۵ ساعت</span></div>
+                        <div>حجم: <span>۶5 گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=Uncharted+4+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+            <!-- Watch Dogs 2 -->
+            <div class="game-card" data-name="watch dogs 2">
+                <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?w=500&auto=format&fit=crop&q=60" alt="Watch Dogs 2" class="game-cover">
+                <div class="game-content">
+                    <h3 class="game-title">WATCH_DOGS 2</h3>
+                    <p class="game-desc">هک کردن سیستم‌های هوشمند شهری در سان فرانسیسکو با گروه DedSec.</p>
+                    <div class="game-details">
+                        <div>رده سنی: <span>+18</span></div>
+                        <div>زمان: <span>۱۹ ساعت</span></div>
+                        <div>حجم: <span>۴0 گیگ</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/results?search_query=Watch+Dogs+2+Gameplay" target="_blank" class="trailer-btn">تماشای تریلر</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function searchGame() {
+            let input = document.getElementById('searchBox').value.toLowerCase();
+            let cards = document.getElementsByClassName('game-card');
+            
+            for (let i = 0; i < cards.length; i++) {
+                let name = cards[i].getAttribute('data-name');
+                if (name.indexOf(input) > -1) {
+                    cards[i].style.display = "flex";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
